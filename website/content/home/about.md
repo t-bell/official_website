@@ -10,9 +10,9 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Datae",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Data Science",
+    "Data Wrangling",
+    "Data Visualization"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -21,15 +21,6 @@ weight = 5
   institution = "Stanford University"
   year = 2012
 
-[[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
-
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
  
 +++
 
