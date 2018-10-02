@@ -1,0 +1,19 @@
+---
+title: "Welcome!"
+author: "Tiana Bell"
+date: 2018-10--02
+categories: ["R"]
+tags: ["Welcome"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# Welcome
+
+I'm Tiana Bell! I've recently completed the Chromebook Data Science Course Set on Leanpub.
+I'm interested in working data and answering interesting questions.
+
+
+
