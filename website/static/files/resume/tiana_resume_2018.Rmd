@@ -1,0 +1,88 @@
+---
+title: "Resume"
+author: "Tiana Bell"
+email: tiana.e.bell@gmail.com
+output:
+  html_document:
+    df_print: paged
+  pdf_document:
+    latex_engine: pdflatex
+    template: rap-latex-cv.tex
+fontfamily: mathpazo
+fontfamilyoptions: sc, osf
+fontsize: 10pt
+geometry: margin=1in
+github: tbell-jhu
+keywords: RMarkdown, academic CV, template
+linkcolor: blue
+fontawesome: yes
+phone: +1 443 8337363
+address: 835 N Fulton Ave, Baltimore, MD, 21217
+updated: no
+urlcolor: blue
+web: www.tbell-jhu.github.io
+---
+
+# EDUCATION AND TRAINING
+*Chromebook Data Science*, Leanpub, Baltimore, MD \hfill June 2018--October 2018
+
+*Baltimore Community College*, Baltimore, MD \hfill 2018--Current
+
+*Oakland Mills High School*, Oakland Mills, Columbia, MD \hfill 2013
+
+# WORK EXPERIENCE
+
+*Administrative Assistant, Spectrum Medical, Silver Spring, MD* \hfill May 2016--Jan 2017
+
+* Automated numerous internal systems which increased speed and efficiency within the company,
+* Accepted additional responsibility to manage provisioning, training, and retail sales management.
+* Prioritized and delegated tasks while still providing motivation and direction to create a positive work
+environment to ensure accurate on-time completion on all assignments.
+* Created and coordinated work schedule to ensure coverage and efficient office operations.
+* Strengthened the dealership reputation by providing expert technical explanations and resolving product disputes between customer, dealer and manufacturers.
+
+*Administrative Assistant, Aronson Medical, Essex, MD* \hfill Jan 2017--June 2017
+
+* Processed patient billing and various medical insurance claims as well as union vouchers
+* Installed and edited patient records on database
+* Responsible for basic administrative office duties such as answering phones, scanning, filing and faxing
+* Educated customers on various products including the application and durable medical equipment supplies
+* Effectively managed and resolved customer inquiries and/or complaints, establishing recurrent clients
+and good working relationships
+* Provided prompt, diligent and outstanding administrative support to staff members across a fast-paced DME practice, significantly reducing customer wait time
+
+*Sales Lead, Just Energy, Baltimore, MD* \hfill Feb 2017--Aug 2017
+
+* Proficient time management skills and able to prioritize.
+* Consistent performer, exceeded monthly quotas by 10% month over month..
+* Accurately completed and maintained customer records for services and quality control measures.
+* Appointed team captain and new hire trainer while being considered for supervisor.
+* Expert level knowledge on department mission, team goals, and sales strategies
+* Achieved periodic sales goals in a challenging and fast-paced environment
+* Exceeded a diverse array of client expectations on a consistent, accurate, and timely basis
+* Implemented various marketing and advertising techniques to generate new sales
+
+
+# SOFTWARE EXPERIENCE
+
+**Statistical Software**: *R, Google Sheets, Microsoft Excel*
+
+**Medicare Insurance Software**: *FastTrak, Brightree*
+
+**Other**: *Excel, Word, Access, Powerpoint, FrontPage, Publisher, Outlook, OneNote, Google Docs, Google Slides*
+
+
+# EXTRACURRICULAR ACTIVITIES
+
+*Youth Ambassador*, YouthWorks \hfill Winter 2018
+
+*Youth Leader*, Youth Empowered Society \hfill May 2018
+
+*Youth Advisory Board*, MODS Human Resources \hfill June 2018
+
+# REFERENCES
+
+*Adryen Proctor*, Peer Navigator, GLCCB, 2530 N. Charles St., 3rd Fl., Baltimore, MD 21218, Phone: +1 (410) 777-8145 x206
+
+*Danielle Meister*, Human Resources Department Coordinator, Mayor’s Office Department of Human Resources, 7 E Redwood St., Baltimore, MD 21207, Phone: +1 (859) 391-4808
+

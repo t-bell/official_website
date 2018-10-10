@@ -11,4 +11,11 @@ blogdown::install_hugo()
 ## use the academic theme
 blogdown::new_site(theme = "gcushen/hugo-academic")
  ## continually show updates to site
+## every time i make changes run this code inside the consol
 blogdown::serve_site()
+#then delete all files from current tbell-jhu folder within website folder except .git folder, .nojekyll file and .gitignore file
+#then move all the files from public folder within website folder into tbell-jhu folder
+#then push changes to github!
+#this is whenever I want the site to update!
+```
+

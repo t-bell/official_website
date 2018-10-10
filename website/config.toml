@@ -61,7 +61,7 @@ enableGitInfo = false
   organizations = [ { name = "Chromebook Data Science", url = "http://jhudatascience.org/chromebookdatascience/" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "DSC_1815.JPG"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
   # Details for the Contact Widget
   email = "tiana.e.bell@gmail.com"
@@ -294,8 +294,8 @@ enableGitInfo = false
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 
 [[menu.main]]
-    name = "CV"
-    url = "files/resume.pdf"
+    name = "Resume"
+    url = "files/resume/tiana_resume_2018.pdf"
     weight = 5
 
 # Search.

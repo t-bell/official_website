@@ -1,0 +1,324 @@
+\documentclass[10pt,]{article}
+\usepackage[sc, osf]{mathpazo}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+
+
+
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% Now begins the stuff that I added.
+% ----------------------------------
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\large\bf}
+\subsectionfont{\rmfamily\mdseries\normalsize\itshape}
+
+
+% Make lists without bullets
+%\renewenvironment{itemize}{
+%  \begin{list}{}{
+%    \setlength{\leftmargin}{1.5em}
+%  }
+%}{
+%  \end{list}
+%}
+
+
+% Make parskips rather than indent with lists.
+\usepackage{parskip}
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+% Use fontawesome. Note: you'll need TeXLive 2015. Update.
+\usepackage{fontawesome}
+
+% Fancyhdr, as I tend to do with these personal documents.
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{
+\cfoot{\scriptsize  Aboozar Hadavand - Curriculum Vitae -  }}
+\rfoot{\scriptsize \thepage/{\hypersetup{linkcolor=black}\pageref{LastPage}}}
+
+% Always load hyperref last.
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+
+\hypersetup{unicode=true,
+            pdftitle={Aboozar Hadavand:  Curriculum Vitae (Curriculum Vitae)},
+            pdfauthor={Aboozar Hadavand},
+            pdfkeywords={RMarkdown, academic CV, template},
+            colorlinks=true,
+            linkcolor=dodgerblue3,
+            citecolor=Blue,
+            urlcolor=dodgerblue3,
+            breaklinks=true, bookmarks=true}
+\urlstyle{same}  % don't use monospace font for urls
+
+\begin{document}
+
+
+\centerline{\huge \bf Aboozar Hadavand}
+
+\vspace{2 mm}
+
+\hrule
+
+\vspace{2 mm}
+
+\moveleft.5\hoffset\centerline{Post Doctoral Fellow, Johns Hopkins University}
+\moveleft.5\hoffset\centerline{615 N Wolfe Street, Rm. E3011, Baltimore, MD 21205}
+\moveleft.5\hoffset\centerline{ \faEnvelopeO \hspace{1 mm} \href{mailto:}{\tt \href{mailto:hadavand@jhu.edu}{\nolinkurl{hadavand@jhu.edu}}} \hspace{1 mm}  \faGithub \hspace{1 mm} \href{http://github.com/ahdvnd}{\tt ahdvnd} \hspace{1 mm}  \faTwitter \hspace{1 mm} \href{http://twitter.com/ahdvnd}{\tt ahdvnd} \hspace{1 mm}  \faGlobe \hspace{1 mm} \href{http://www.ahadavand.com}{\tt www.ahadavand.com}    | \emph{Updated:} \today}
+
+\vspace{2 mm}
+
+\hrule
+
+
+\hypertarget{research-and-teaching-interests}{%
+\section{RESEARCH AND TEACHING
+INTERESTS}\label{research-and-teaching-interests}}
+
+\emph{Research:}
+
+\begin{quote}
+Labor Economics, Economics of Education, Health Economics
+\end{quote}
+
+\emph{Teaching:}
+
+\begin{quote}
+Introductory Economics, Labor Economics, Health Economics, Public
+Economics
+\end{quote}
+
+\hypertarget{positions}{%
+\section{POSITIONS}\label{positions}}
+
+\emph{Johns Hopkins University, Bloomberg School of Public Health},
+Postdoctoral Scholar, \hfill Current
+
+\emph{Columbia University, Barnard College}, Adjunct Instructor,
+\hfill 2016--2017
+
+\hypertarget{education}{%
+\section{EDUCATION}\label{education}}
+
+\emph{City University of New York, Graduate Center}, Ph.D.~Economics
+\hfill 2017
+
+\emph{Texas Tech University}, M.A.~Economics \hfill 2011
+
+\emph{Iran University of Science and Technology}, M.Sc. Control Systems
+\& Robotics \hfill 2008
+
+\emph{Iran University of Science and Technology}, B.Sc. Electrical Eng.
+\hfill 2005
+
+\hypertarget{publications}{%
+\section{PUBLICATIONS}\label{publications}}
+
+\hypertarget{journal-articles}{%
+\subsection{\texorpdfstring{\textbf{Journal
+Articles}}{Journal Articles}}\label{journal-articles}}
+
+Hadavand, A., Thomas, S., Almasi, P., Gharehgozli, O., \emph{New
+Evidence on the Match Between College Coursework and Occupations},
+Revise and Resubmit, Education Economics.
+
+Hadavand, A., \emph{Misperceptions and Mismeasurements: An Analysis of
+Subjective Economic Inequality}, Forthcoming, Research on Economic
+Inequality.
+
+Hadavand, A., \emph{Educational Aid Policy and Inequality: The Case for
+Merit- and Need-Based Aid}, Forthcoming, Review of Social Economy.
+
+\hypertarget{pre-prints}{%
+\subsection{\texorpdfstring{\textbf{Pre-prints}}{Pre-prints}}\label{pre-prints}}
+
+Hadavand, A., Gooding, I., Leek, J.T., \emph{Can MOOC programs improve
+student employment prospects?}, Submitted to Science.
+
+Hadavand, A., \emph{Anatomy of Income Inequality in the United States:
+1979-2013}, LIS Working Papers.
+
+Hadavand, A., Trujillo, A., \emph{Misperception of Body Size as
+Motivated Belief}, Working Paper.
+
+Hadavand, A., Leek, J.T., \emph{Analysis of Student Progress in Online
+Courses}, Working Paper.
+
+\hypertarget{software}{%
+\subsection{\texorpdfstring{\textbf{Software}}{Software}}\label{software}}
+
+Hadavand, A., Muschelli, J., Leek, J.T., \emph{crsra: Tidying and
+Analyzing `Coursera' Research Export Data}, Available on CRAN,
+\url{https://CRAN.R-project.org/package=crsra}.
+
+Hadavand, A., \emph{citec: A Package for Scraping RePEc CitEc Data},
+Available on \url{https://github.com/ahdvnd/citec}.
+
+\hypertarget{awards}{%
+\section{AWARDS}\label{awards}}
+
+\textbf{2017} \emph{Dissertation Fellowship Award}, CUNY, Graduate
+Center
+
+\textbf{2017} \emph{Doctoral Student Research Grant}, CUNY, Graduate
+Center
+
+\textbf{2015} \emph{Sallie Mae Graduate Student Award}
+
+\textbf{2013} \emph{Advanced Research Collaborative Fellowship}, CUNY,
+Graduate Center
+
+\textbf{2013} \emph{Quantitative Reasoning Fellowship}, CUNY, BMCC
+
+\textbf{2011} \emph{Chancellor's Fellowship}, CUNY, Graduate Center
+
+\hypertarget{employment}{%
+\section{EMPLOYMENT}\label{employment}}
+
+\emph{United States Naval Reserve:}
+
+\begin{quote}
+Naval Reserve Midshipmen's School \hfill 1943--1944
+\end{quote}
+
+\emph{Bureau of Ships Computation Project (Harvard):}
+
+\begin{quote}
+Research Fellow \hfill 1945-1949 Lieutenant, Jr Grade \hfill 1944
+\end{quote}
+
+\hypertarget{teaching}{%
+\section{TEACHING}\label{teaching}}
+
+\emph{Associate Professor, Mathematics, Vassar} \hfill 1931--1941
+
+\begin{quote}
+Teach students about math, began career in programming and largely
+developed design and implementation of a computer compiler.
+\end{quote}
+
+\emph{Director, Navy Programming Languages Group} \hfill 1967--1977
+
+\begin{quote}
+She developed validation software for COBOL and its compiler as part of
+a COBOL standardization program for the entire Navy. Hopper advocated
+for the Defense Department to replace large, centralized systems with
+networks of small, distributed computers. Any user on any computer node
+could access common databases located on the network. She developed the
+implementation of standards for testing computer systems and components,
+most significantly for early programming languages such as FORTRAN and
+COBOL. The Navy tests for conformance to these standards led to
+significant convergence among the programming language dialects of the
+major computer vendors. In the 1980s, these tests (and their official
+administration) were assumed by the National Bureau of Standards (NBS),
+known today as the National Institute of Standards and Technology
+(NIST). (Source: \url{https://en.wikipedia.org/wiki/Grace_Hopper})
+\end{quote}
+
+\hypertarget{publications-1}{%
+\section{PUBLICATIONS}\label{publications-1}}
+
+\hypertarget{journal-articles-1}{%
+\subsection{\texorpdfstring{\textbf{Journal
+Articles}}{Journal Articles}}\label{journal-articles-1}}
+
+G. M. Hopper and O. Ore. 1934. ``\emph{New types of irreducibility
+criteria}.'' Bull. Amer. Math. Soc. 40 (216).
+
+\hypertarget{books}{%
+\subsection{\texorpdfstring{\textbf{Books}}{Books}}\label{books}}
+
+Beyer, Kurt W. 2009. \emph{Grace Hopper and the Invention of the
+Information Age}. Cambridge, Massachusetts: MIT Press. ISBN
+978-0-262-01310-9.
+
+Williams, Kathleen Broome. 2004. \emph{Grace Hopper: Admiral of the
+Cyber Sea} (1st ed.). Annapolis, Maryland: Naval Institute Press. ISBN
+978-1-55750-952-9.
+
+\hypertarget{public-media}{%
+\section{PUBLIC MEDIA}\label{public-media}}
+
+``Nano-seconds'' lecture by Grace Hopper.
+\url{https://www.youtube.com/watch?v=JEpsKnWZrJ8}
+
+\hypertarget{awards-1}{%
+\section{AWARDS}\label{awards-1}}
+
+\textbf{1964} \emph{Society of Women Engineers Achievement Award}, the
+Society's highest honor, ``In recognition of her significant
+contributions to the burgeoning computer industry as an engineering
+manager and originator of automatic programming systems.''
+
+\textbf{1969} \emph{Data Processing Management Association Man of the
+Year} (now called the Distinguished Information Sciences Award)
+
+\textbf{1973} \emph{Distinguished Fellow of the British Computer
+Society}. First American and the first woman of any nationality to be
+given award.
+
+\textbf{1982} \emph{American Association of University Women Achievement
+Award}
+
+\textbf{1987} \emph{Computer History Museum Fellow Award Recipient}
+First to receive this award, for contributions to the development of
+programming languages, for standardization efforts, and for lifelong
+naval service.
+
+\textbf{1991}: \emph{National Medal of Technology}
+
+\textbf{1996}: \emph{USS Hopper (DDG-70) was launched}. Nicknamed
+Amazing Grace, it is on a very short list of U.S. military vessels named
+after women.
+
+\textbf{2009}: The Department of Energy's National Energy Research
+Scientific Computing Center named its flagship system ``Hopper''
+
+\textbf{2016}: Posthumously awarded a \emph{Presidential Medal of
+Freedom} for her accomplishments in the field of computer science
+
+\end{document}
