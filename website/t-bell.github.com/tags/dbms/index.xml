@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DBMS on Tiana Bell</title>
+    <link>/tags/dbms/</link>
+    <description>Recent content in DBMS on Tiana Bell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 15 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/dbms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lessons Learned - First Client Project</title>
+      <link>/post/lessons-learned-with/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/lessons-learned-with/</guid>
+      <description>This project was about working with machine learning models and predictions while sourcing from an online cloud object. IN THE MIDDLE OF THE HOLIDAYS. Talk about stress!
+This is how we did it:
+After establishing access on the cloud system for all persons working on the project, we create connnection objects within the RStudio project session and save within our local environment. Unless your team is set up with Version Control, each individual will have to create the connection object within their own workspace and global environment.</description>
+    </item>
+    
+  </channel>
+</rss>

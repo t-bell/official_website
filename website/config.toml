@@ -8,7 +8,7 @@
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "/"
 relativeurls = true
-canonifyurls = false
+canonifyurls = true
 
 # Title of your site
 title = "Tiana Bell"
@@ -54,18 +54,18 @@ enableGitInfo = false
 
   # Your details.
   name = "Tiana Bell"
-  role = ""
+  role = "Jr Data Science Analyst"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Chromebook Data Science", url = "http://jhudatascience.org/chromebookdatascience/" } ]
+  organizations = [ { name = "Chromebook Data Science", url = "http://jhudatascience.org/chromebookdatascience/" }, {name = "Problem Forward", url = "http://www.problemforward.com/"} ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "DSC_1815.JPG"  
   #Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
   # Details for the Contact Widget
-  email = "tiana.e.bell@gmail.com"
+  email = "tiana.e.bell@problemforward.com"
   address = ""
   office_hours = ""
   phone = ""
@@ -254,7 +254,7 @@ enableGitInfo = false
   [[params.social]]
     icon = "github"
     icon_pack = "fab"
-    link = "//github.com/tbell-jhu"
+    link = "//github.com/t-bell"
 
   # Link to a PDF of your resume/CV from the About widget.
   # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

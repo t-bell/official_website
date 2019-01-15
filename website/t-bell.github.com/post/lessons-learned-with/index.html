@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 2.4.0">
+  <meta name="generator" content="Hugo 0.53" />
+  <meta name="author" content="Tiana Bell">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="This project was about working with machine learning models and predictions while sourcing from an online cloud object. IN THE MIDDLE OF THE HOLIDAYS. Talk about stress!
+This is how we did it:
+After establishing access on the cloud system for all persons working on the project, we create connnection objects within the RStudio project session and save within our local environment. Unless your team is set up with Version Control, each individual will have to create the connection object within their own workspace and global environment.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="../../post/lessons-learned-with/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href=//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono>
+  
+
+  <link rel="stylesheet" href="../../styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="../../index.xml" type="application/rss+xml" title="Tiana Bell">
+  <link rel="feed" href="../../index.xml" type="application/rss+xml" title="Tiana Bell">
+  
+
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="icon" type="image/png" href="../../img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="../../img/icon-192.png">
+
+  <link rel="canonical" href="../../post/lessons-learned-with/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Tiana Bell">
+  <meta property="og:url" content="/post/lessons-learned-with/">
+  <meta property="og:title" content="Lessons Learned - First Client Project | Tiana Bell">
+  <meta property="og:description" content="This project was about working with machine learning models and predictions while sourcing from an online cloud object. IN THE MIDDLE OF THE HOLIDAYS. Talk about stress!
+This is how we did it:
+After establishing access on the cloud system for all persons working on the project, we create connnection objects within the RStudio project session and save within our local environment. Unless your team is set up with Version Control, each individual will have to create the connection object within their own workspace and global environment.">
+  
+  
+    
+  <meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-01-15T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-01-15T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Lessons Learned - First Client Project | Tiana Bell</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="../../">Tiana Bell</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="../../#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="../../#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="../../#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="../../#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="../../files/resume/tiana_resume_2018.pdf">
+            
+            <span>Resume</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Lessons Learned - First Client Project</h1>
+
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Tiana Bell">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2019-01-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2019-01-15 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Jan 15, 2019
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Tiana Bell">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="../../categories/data-wrangling/">Data Wrangling</a>, 
+    
+    <a href="../../categories/prediction-models/">Prediction Models</a>, 
+    
+    <a href="../../categories/dbms/">DBMS</a>, 
+    
+    <a href="../../categories/sql/">SQL</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Lessons%20Learned%20-%20First%20Client%20Project&amp;url=%2fpost%2flessons-learned-with%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2flessons-learned-with%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2flessons-learned-with%2f&amp;title=Lessons%20Learned%20-%20First%20Client%20Project"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2flessons-learned-with%2f&amp;title=Lessons%20Learned%20-%20First%20Client%20Project"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Lessons%20Learned%20-%20First%20Client%20Project&amp;body=%2fpost%2flessons-learned-with%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <p>This project was about working with machine learning models and predictions while sourcing from an online cloud object. IN THE MIDDLE OF THE HOLIDAYS. Talk about stress!</p>
+
+<p>This is how we did it:</p>
+
+<p>After establishing access on the cloud system for all persons working on the project, we create connnection objects within the RStudio project session and save within our local environment. Unless your team is set up with Version Control, each individual will have to create the connection object within their own workspace and global environment.
+  Install or load:</p>
+
+<ul>
+<li><code>install.packages(&quot;DBI&quot;)</code></li>
+<li><code>install.packages(&quot;bigrquery&quot;)</code>
+<br /></li>
+</ul>
+
+<p>These packages allow R to interact with Google&rsquo;s BigQuery (which is an online Database Management System) smoothly. Once installed and loaded you can begin setting up your local connection.</p>
+
+<p>Create a new <code>.R</code> or <code>.r</code> script and you are able to save the con /(connection) object within the local environment.
+  The code should look similar too:</p>
+
+<pre><code class="language-r">  # function within DBI package
+  con = dbConnect(
+  # specifies which DBMS
+    bigquery(),
+    project = &quot;your_proj_here&quot;,
+    dataset = &quot;your_dataset_here&quot;
+  )
+</code></pre>
+
+<p>Once saved into your local and global environment, put the <code>.r/.R</code> script into the <code>.gitignore</code> file. Make sure everyone on the team does this or your data will be accessed by all (remember: version control)!
+  While we are setting up connections run this line of code through your console</p>
+
+<p><code>options(httr_oob_default = TRUE)</code></p>
+
+<p>this allows a simple bypass to access APIs through R. (Technically the con is this, BUUUT R is fickle.)</p>
+
+<p>Annoying Reminder: Run this code everytime R loads | set add into preloaded code chunks that run when you automaticaly start a session. There&rsquo;s a lot of blogs about how to create preloads if you need guidance. Sad to say, this isn&rsquo;t one&hellip;moving onward!</p>
+
+<p>There&rsquo;s going to be a message that pops up in the console similar to this:</p>
+
+<pre><code>` Use a local file ('.httr-oauth'), to cache OAuth access credentials between R sessions?
+
+# 1: Yes
+# 2: No`
+</code></pre>
+
+<p>Depending on how secure you want your connection to be will determine which option you choose.
+  More or less:</p>
+
+<pre><code>1 = Local file is created but whoever has access to your computer will have access to the file.
+2 = No file is created and you are brought through a secondary verification process. Copy access code from new tab into console.
+</code></pre>
+
+<p>This particular client had pretty sweet info so we choose to go with the second option along with other security measures.
+    If you are working with R or RStudio, you&rsquo;ve noticed memory capacities and other slightly annoying errors encountered with working with large datasets. If you&rsquo;re reading this, you know exactly what I&rsquo;m referring too:</p>
+
+<ul>
+<li>Can&rsquo;t pull DataSets/Tables with over 100k rows without crashing R.</li>
+<li>Memory issues where the app just crashes (doesn&rsquo;t even give an actual error code sometimes; I&rsquo;m still locked out of one of my R sessions.) etc etc.
+<br /></li>
+</ul>
+
+<p>FORTUNATELY enough for you BigQuery helps R by doing a &ldquo;LazyQuery&rdquo; where BigQuery translates R into SQL, applies filters/functions you coded to a small section of the datatable and then prints a <code>10 x ??</code> tibble for you.</p>
+
+<p>Although this may feel unsecure, the small tibbles allow you to see IF your filters/functions were applied properly!</p>
+
+<p>This is also where the <code>dplyr::count()</code> and <code>dplyr::collect()</code> calls come in clutch. <code>dplyr::count()</code> acts as a a wrapper with <code>group_by</code> and <code>ungroup</code>. This allows all things to be accounted for according to the respective filters. <code>dplyr::collect()</code> allows local tibbles to be created.</p>
+
+<p>Ex:</p>
+
+<pre><code class="language-r,"># count() groups the variables within specified column as factors without having to use as.factor(). After computation has been printed count() automaticaly ungroups. 
+  mtcars %&gt;%
+    count(cyl)
+  # A tibble: 3 x 2
+  #      cyl     n
+  #     &lt;dbl&gt; &lt;int&gt;
+  # 1     4    11
+  # 2     6     7
+  # 3     8    14
+
+# collect allows the table to be created into the local environment by pulling and retrieving data from the SQL query on the DBMS. 
+# if this was only called  without collect the R session would crash because R will pull entire dataset.
+  mtcars %&gt;%
+   select(gear, cyl) %&gt;%
+   group_by(gear) %&gt;%
+   summarise(cyl_amount = n_distinct(cyl)) %&gt;%
+   collect()
+  # A tibble: 3 x 2
+  # gear cyl_amount
+  # &lt;dbl&gt;      &lt;int&gt;
+  # 1     3          3
+  # 2     4          2
+  # 3     5          3
+</code></pre>
+
+<p>These two useful functions will allow you to pull and extract data without crashing your session! Just be careful what you collect!</p>
+
+<p>Because our client&rsquo;s dataset was so untidy it was extremely stressful tidying!!! BigQuery/SQL saves the certain numeric classes into FLOAT numbers, which can be tricky to integrate into R.</p>
+
+<p>R KNOWS these numbers to correlate as <code>Double-Precision Vectors</code>. It&rsquo;s super frustating because it&rsquo;s the same thing BUT R just doesn&rsquo;t recognize it as such. :(</p>
+
+<p>I only bring this up if you have to do calculations with your original FLOAT variables. It&rsquo;s a slight pain to convert, re-convert etc etc. To help alleviate some SCRESS load these packages into your sesh:</p>
+
+<pre><code class="language-r,">library(devtools)
+library(dplyr)
+library(bigrquery)
+
+# quick promo - shoutout github::@kbmorales
+library(PFbaseproject)
+
+library(DBI)
+library(odbc)
+library(here)
+library(stats)
+library(dbplot)
+library(dbplyr)
+library(stringr)
+# library(scater)
+library(broom)
+</code></pre>
+
+<p>With these loaded most FLOAT values should play within R nicely with other NUMERIC or INTEGER variables, but no promises. (._. )</p>
+
+<p>SEARCHING THROUGH LARGE DATABASES</p>
+
+<p>Woohoooooooooooooooo&hellip;.no?</p>
+
+<p>WELL, learning some regular expression will DEFINITELY help out when finding specifics in R. Especially filtering and sifting through character string variables and you are unsure about what the data hides. For perspective we were working with a DBMS, with 4 Datatables and each table had 3mil+ rows. This may seem normal to most experts, but for a newbie like myself it was overwhelming for sure!!!</p>
+
+<p>There are a few hiccups when working with R and a SQL query. There are certin base R functions that are not recognized within SQL. If you know SQL code working around this shouldn&rsquo;t be hard, if not it&rsquo;s a struggle to work around.</p>
+
+<p>The functions we specifically used in conjunction with regular expressions were <code>stringr::str_detect</code> indexed within the column we are inquiring about. Code should look similar to this:</p>
+
+<pre><code class="language-r,">  # using zipcodes as an example
+ zip &lt;- con %&gt;%
+   tbl(&quot;query_table&quot;) %&gt;%
+   select(zipcodes) %&gt;%
+ # when count() &amp; collect() are called without an expression or variable listed inside
+ # the default is to apply the function to all the code above it
+ # only if piped!
+   count() %&gt;%
+   collect()
+ 
+ # tibble we created because of the collect() call
+ # lol
+ zip &lt;- zip[str_detect(zip$zipcode, &quot;\\d{5}-&quot;)]
+</code></pre>
+
+<p>The above line of code is detecting all numeric strings within the tibble <code>zip</code> and column <code>zipcode</code>, <code>&quot;\\d&quot;</code> that include exactly five digits <code>{5}</code> and a dash <code>-</code>.</p>
+
+<p>Because we set zip as a tibble with <code>count()</code> AND <code>collect()</code> when we call the string detected line of code a tibble will return with the different zipcodes grouped and meeting the requirements listed. Here is an example below:</p>
+
+<pre><code class="language-r,"># # A tibble: 13 x 2
+# # Groups:   zipcode [13]
+#   zipcode        n
+#     &lt;chr&gt;      &lt;int&gt;
+# 1  13455-5589      8
+# 2  10452-8001     46
+# 3  10467-2410     37
+# 4  76661-         13
+# 5  09394-        919
+# 6  79079-        456
+# 7  92834-        385
+# 8  15235-5505  44627
+# 9  19013-3840    420
+# 10 19401-4715   1422
+# 11 77640-       3399
+# 12 59860-7037     10
+# 13 NA             NA
+</code></pre>
+
+<p>Notice that the line of code also returned some numeric strings that had numbers following the dash. That is because in our regular expression there was not an <code>$</code> anchor at the end of the expression to tell R that we only want 5 digit zips WITHOUT more numbers. This is something to keep in mind!</p>
+
+<p>Still working with the package <code>stringr</code> we were able to truncate strings and split them based on our needs via the client&rsquo;s wants. We ended up using <code>stringr::str_truncate()</code> for the zipcodes, as it was easier and provided cleaner code production. There was an issue we had where one column held a lot of information that could be split up for easier wrangling. <code>stringr::str_split()</code> definitely helped! It was a column full of alphabetic and numeric character strings that needed to be separated.</p>
+
+<p>Here&rsquo;s some example reproducible code provided by one of our team leads @<a href="https://github.com/jtleek" target="_blank">jtleek</a> !</p>
+
+<pre><code class="language-r,"># create these extra columns and repeat exactly however many 
+# empty rows needed within the DT, tibble, DF etc etc. 
+newcol1 = newcol2 = newcol3 = rep(NA,dim(dataframe)[1])
+# conditional statement that allows us to detect
+# a string and split the string into sections
+for(i in 1:dim(dataframe)[1]){
+# created function that tells R to look for a &quot;space&quot; 
+# within the name
+  tmp = str_split(dataframe$originalcol[i],&quot;[ ]{1,}&quot;)
+# if there are 3 spaces within the string = 1 space
+  if(length(tmp[[1]])==3){
+    newcol1[i] = tmp[[1]][1]
+    newcol2[i] = tmp[[1]][2]
+    newcol3[i] = tmp[[1]][3]
+  }
+# if four spaces do the same
+  if(length(tmp[[1]])==4){
+    newcol1[i] = tmp[[1]][1]
+    newcol2[i] = paste(tmp[[1]][2:3],collapse=&quot;&quot;)
+    newcol3[i] = tmp[[1]][4]
+  }
+}
+
+# renaming and setting columns
+dataframe$newcol1 = newcol1
+dataframe$newcol2 = newcol2
+dataframe$newcol3 = newcol3
+</code></pre>
+
+<p>Also SQL has problems reading large nested code chunks. It will get confused with parenthesises (another random issue). BigQuery SQL WILL NOT read queries (r code chunks) longer than 1024.00k characters. I ran into this problem a couple of times running a large filtered code chunk I created. Creating functions and source files will help DRAMATICALLY as far as saving ram/memory, cpu, and preventing the error code for long queries. An awesome hot tip to consider!</p>
+
+<p>Let&rsquo;s talk about workflow&hellip; .
+Working under different management can be confusing and sometimes challenging. Luckily I am apart of a pretty amazing team, although I recommend that if you&rsquo;re working with a database THAT extensive: try not make the deadline centered around the holidays! Especially if the holiday takes up most of your work week. The team found themselves exhausted and exasporated because of the short amount of time we had to figure this stuff out!</p>
+
+<p>Please give yourself an adequate amount of time to analyze, improve, test and restructure the project/task at hand!</p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="../../tags/sql/">SQL</a>
+  
+  <a class="badge badge-light" href="../../tags/dbms/">DBMS</a>
+  
+  <a class="badge badge-light" href="../../tags/bigquery/">BigQuery</a>
+  
+  <a class="badge badge-light" href="../../tags/r/">R</a>
+  
+  <a class="badge badge-light" href="../../tags/entry-level/">Entry Level</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="../../project/wrangling-data-department-stores/">Wrangling Data - Department Stores</a></li>
+        
+        <li><a href="../../project/atus-survey-data/">Atus Time Use Survey Analysis</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="../../privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="../../js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    <script src="../../js/search.js"></script>
+    
+
+    
+    
+
+  </body>
+</html>
+
